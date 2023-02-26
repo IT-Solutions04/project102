@@ -1,0 +1,29 @@
+[ ] update MANUAL.txt date
+[ ] make prerelease
+[ ] Finalize changelog
+[ ] Update AUTHORS (make authors LASTRELEASE=x.y.z)
+[ ] Run release candidate workflow manually on GitHub
+[ ] if it builds successfully, download artifacts
+[ ] run tools/build-arm.sh to create and download arm64 linux package
+[ ] Use 'make' in macos and windows artifacts to sign code
+[ ] make update-website
+[ ] Tag release in git:
+    - use X.Y for pandoc
+    - if needed: pandoc-cli-X.Y
+    - if needed: pandoc-server-X.Y
+    - if needed: pandoc-lua-engine-X.Y
+[ ] Upload packages to hackage if changed:
+    - pandoc
+    - pandoc-cli
+    - pandoc-server
+    - pandoc-lua-engine
+[ ] make pandoc-templates
+    cd ../pandoc-templates
+    git tag REL
+    git push
+    git push --tags
+[ ] Add release on github (use 'make changes_github' and upload files)
+[ ] copy deb to server, install it
+[ ] if needed, sh tools/build-and-upload-api-docs.sh
+[ ] Announce on pandoc-announce, pandoc-discuss
+
